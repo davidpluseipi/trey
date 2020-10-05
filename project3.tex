@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{graphics}
+
+\begin{document}
+\title{Project 3}
+\author{D. M.}
+\date{14 September 2020}
+\maketitle
+
+\section{Introduction}
+\label{intro}
+The purpose of this project is to learn how to find files in a particular folder.
+
+\section{Command}
+\label{sec:1}
+The command I ended up using for this was
+\begin{verbatim}
+find . -name "oski*.*" -print "%f\n" > results.res
+\end{verbatim}
+
+\subsection{Find}
+\label{sec:2}
+The command \verb|find| is followed by a folder path.
+
+\subsection{Options}
+\label{sec:3}
+
+The two options used were \verb|-name| and \verb|-printf|. The option
+\verb|-name| requires, as an input argument, the name of the file
+you're looking for in double quotes. Here I used * (wild card) to tell
+it I wanted to find a file with any extension whose filename started with
+\verb|oski|. The option \verb|-printf| was used with the argument \verb|%f\n|
+to tell it to print out 1) just the filename (\verb|%f|), and 2) print
+each file's name on a different line (\verb|\n|). The rest of the command
+\verb|> results.res| just places those results in the .res file for storage
+and/or later use.
+
+\section{Process}
+\label{sec:4}
+To complete these tasks and best determine which functions and options to use,
+I would repeat the following process.
+\begin{enumerate}
+	\item Review the command's help with \verb|command --help|
+	\item Review the command's doc on gnu.org.
+	\item Do a Google search within the gnu.org domain searching for
+ '\verb|gnu.org: search pattern|'
+	\item Do a Google search within the stackoverflow.com domain
+	\item Search Google, letting Google find the best results
+	\item Contact someone else for help or advice
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{RefA}
+MacKenzie, D., Youngman, J. (2019). \textit{Finding Files}. Free Software Foundation. 
+https://www.GNU.org/software/findutils/manual/find.pdf
+\end{thebibliography}
+\end{document}

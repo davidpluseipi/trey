@@ -1,0 +1,7 @@
+chmod modifies access permissions
+chown
+chgrp
+sort
+pwd
+car
+> redirects the staandard output of a command to a file

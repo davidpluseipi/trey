@@ -1,0 +1,2 @@
+monkies = 3
+total_time = 3.3
