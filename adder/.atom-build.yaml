@@ -1,0 +1,1 @@
+cmd: gcc gaussadder.c -o gaussadder
