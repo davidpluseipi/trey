@@ -21,6 +21,7 @@ int main() {
     printf("Invalid input. Exiting.\n");
     return 1;
   }
+  
   //int A[3][3];
   for (int i = 0; i < n*n; i++){
     arr[i] = i + 1;
