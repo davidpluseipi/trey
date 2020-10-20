@@ -1,21 +1,28 @@
 #include<stdio.h>
+#include<stdlib.h>
 
-// A normal function with int parameter and void return type
-void fun(int a) {
-  printf("Value of a is %d\n", a);
+// External function declarations
+double fun1(void (*f)(double), double x);
+double fun2(double (*f)(double), double a, double b, int n);
+
+// Internal Functions
+void printNumber(double a) {
+  printf("print number: %lf\n", a);
+}
+
+double myFunction(double input){
+  return (input*2);
 }
 
 int main(){
-  // funptr is a pointer to the function void
-  void (*funptr)(int) = &fun;
 
-  // the above line is equivalent to
-  // void (*funptr)(int);
-  // funptr = &fun;
+  double ans;
 
-  // Invoking fun() using funptr
-  (*funptr)(10);
+  ans = fun1(printNumber,2);
+  printf("output from function 1: %lf\n", ans);
+
+  ans = fun2(myFunction,2,3,2);
+  printf("output from function 2: %lf\n", ans);
 
   return 0;
-
 }
